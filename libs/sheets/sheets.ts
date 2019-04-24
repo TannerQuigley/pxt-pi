@@ -11,6 +11,10 @@ namespace sheets {
         readCell(cell: string): string { return '' };
         //% blockId="append" block="to %sheet append %row"
         appendRow(row: string[]): void { };
+        //% blockId="for" block="%sheet for col in row %row"
+        for(row: number, handler: () => void): void { }
+        //% blockId="header" block="create header for %sheet from keys %keys"
+        createHeader(keys: string[]): void { }
     }
 
     //% blockId="createSheet" block="create new sheet called %title"
